@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="cajas">
+      <div class="primera">
+        <div class="contenido-uno">
+          <div class="img">
+            <img class="notebook" src="./assets/img/notebook.jpg" alt="">
+          </div>
+          <h2>Notebook Acer</h2>
+          <div class="text-input">
+            <input id="cantidad" value="" name="cantidad" placeholder="Cantidad" />
+            <input id="color" value="" name="color" placeholder="Color" />
+          </div>  
+        
+        <div class="precio"> 
+          <p>Precio: <p id="txtprecio"></p></p>
+        </div>   
+        <div class="boton"> 
+          <button onclick="miPrimeraFuncion();">Calcular Total</button>
+        </div> 
+        </div> 
+      </div>
+      <div class="segunda">
+        <div>
+        Total:
+        <p id="txttotal"></p>
+        </div>
+        <div>
+        Cantidad:
+        <p id="txtcantidad"></p>
+        </div>
+        <div>
+        Color:
+        <div id="cajacolor"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let valor =700000;
+    document.getElementById("txtprecio").innerHTML = valor;
+    
+    function miPrimeraFuncion() {
+      let cantidad = document.getElementById("cantidad").value;
+      let color = document.getElementById("color").value;
+      let total = valor * cantidad;
+      document.getElementById("txttotal").innerHTML = total;
+      document.getElementById("txtcantidad").innerHTML = cantidad;
+      document.getElementById("cajacolor").style.backgroundColor = color;
+      console.log(document.getElementById("cantidad").value);
+    }
+  </script>
+</html>
